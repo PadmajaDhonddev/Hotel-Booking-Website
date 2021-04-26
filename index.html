@@ -3,32 +3,68 @@
 
 <head>
     <title>Index</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cityImage {
+            height: 150px;
+            width: 150px;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .socialLogo {
+            height: 20px;
+            width: 22px;
+        }
+    </style>
 </head>
 
 <body>
     <div>
-        <div>
-            <img src="assests\images\logo.png" alt="logo" height="100px" width="150px">
-            <a href="login.html" target="_blank">Login</a>
-        </div>
+        <header>
+            <img class="logo" src="assests/images/logo.png" alt="logo">
+            <a href="login.html">Login</a>
+        </header>
+
         <div>
             <form>
                 <input type="text" placeholder="City">
             </form>
-            <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" height="300px" width="300px" alt="Delhi"></a>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" height="300px" width="300px" alt="Goa">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" height="300px" width="300px" alt="Charminar">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" height="300px" width="300px" alt="kolkata-calcutta" ><br/>
-            <a href="index.html">View more>></a>
-        </div>
-        <div>
-            <a href="contact.html" >Contact Us</a><br/>
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="Facebook" height="20px" width="22px"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="Instagram" height="20px" width="22px"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="Twitter" height="20px" width="22px"></a>
-            <p>© 2020 ROOM SEARCH PVT.LTD.</p>
+            <div>
+                <a href="list.html"><img class="cityImage"
+                        src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
+                        alt="newDelhi"></a>
+                <img class="cityImage" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg"
+                    alt="Goa">
+                <img class="cityImage" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg"
+                    alt="Hyderabad">
+                <img class="cityImage"
+                    src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
+                    alt="Kolkata">
+            </div>
+            <div><a href="index.html">View more>></a></div>
 
         </div>
+        <footer>
+            <a href="contact.html">Contact Us</a><br />
+            <div>
+                <a href="https://www.facebook.com"  target="_blank"><img
+                        src="assests/images/facebook.png" class="socialLogo" alt="Facebook"></a>
+                <a href="https://www.instagram.com"  target="_blank"><img
+                        src="assests/images/instagram.png" class="socialLogo" alt="Instagram"></a>
+                <a href="https://twitter.com"  target="_blank"><img src="assests/images/twitter.png"
+                        class="socialLogo" alt="Twitter"></a>
+            </div>
+            <p>© 2020 ROOM SEARCH PVT.LTD.</p>
+
+        </footer>
     </div>
 </body>
 
