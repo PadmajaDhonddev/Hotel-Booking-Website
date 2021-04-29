@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Payment</title>
     <style>
         body {
@@ -9,23 +10,39 @@
             height: 100%;
             margin: 0px;
             background-color: #e0e0e0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #full {
+            margin-top: 80px;
+            margin-bottom: 300px;
         }
 
         .hotelImage {
-            height: 500px;
-            width: 500px;
+            height: 250px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                float:left;
+                flex: 40%;
         }
 
         .info {
             background-color: rgb(132, 136, 139);
-            max-width: 50%;
+            max-width: 60%;
             min-width: 25%;
             max-height: 20%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 2%;
+            margin-top: 15%;
             margin-bottom: 2%;
+            display: flex;
+                flex: 100%;
         }
+        h3{
+                font-size: 200%;
+                font-weight: bolder;
+            }
 
         .logo {
             height: 60px;
@@ -35,70 +52,120 @@
         .socialLogo {
             height: 20px;
             width: 22px;
+            
         }
 
         header {
             background-color: rosybrown;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:10%;
+                display: flex;
+                justify-content: space-between;
         }
 
         footer {
             background-color: rosybrown;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+            height: auto;
+            top: auto;
+            display: flex;
+                left:0;
+                justify-content:space-between;
+                vertical-align: middle;
+                padding:1%;
+        }
+
+        .login {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #contactus {
+            left: 15px;
+            position: relative;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        #linkSty {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
         }
 
         .customer {
-            margin: 2%;
+            margin: 5%;
         }
 
-        .tarrif{
+        .tarrif {
             margin: 2%;
             border: 1px solid black;
             border-radius: 5px;
             padding: 1% 2%;
+            background-color: rosybrown;
+                display: flex;
+
+                justify-content: space-around;
+                text-align: left;
         }
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="full">
         <header>
             <a href="index.html"><img src="assests\images\logo.png" alt="logo" class="logo"></a>
-            <a href="login.html" target="_blank">Login</a>
+            <a href="login.html" target="_blank" class="login">Login</a>
         </header>
         <div>
             <div class="info">
                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
                     class="hotelImage" alt="Radisson Blu Hotel">
-                <h2>Radisson Blu Hotel</h2>
+                    <div class="detailsColumn"><h3>Radisson Blu Hotel</h3>
                 <p>#38 of 1,289 hotels in New Delhi</p>
-                <p>National highway 8, New Delhi 110017 India</p>
-            </div>
-
-            <div class="customer">
-                <p><b>Name:</b> John Doe</p>
-                <p><b>Number of Adults:</b> 2</p>
-                <p><b>Check-in Date:</b>06/06/2020</p>
-                <p><b>Check-out Date:</b>08/06/2020</p>
+                <p>National Highway 8, New Delhi 110017</p></div></div>
             </div>
 
             <div class="tarrif">
-                <p><b>Tariff Breakdown:</b> Rs. 1000 x 2 Adults x 5 Nights</p>
-                <p><b>Total Amount:</b> Rs. 10000</p>
+                <div>
+                    <p><b>Name:</b> John Doe</p>
+                    <p><b>Number of Adults:</b> 2</p>
+                    <p><b>Check-in Date:</b>06/06/2020</p>
+                    <p><b>Check-out Date:</b>08/06/2020</p>
                 </div>
 
-            <a href="payment.html">Pay Now</a>
+                <div style="margin-top: 2%;">
+                    <p><b>Tariff Breakdown:</b> Rs. 1000 x 2 Adults x 5 Nights</p>
+                    <p><b>Total Amount:</b> Rs. 10000</p>
+                </div>
 
+                <div style="margin-top: 4%;"><a href="" id="linkSty">Pay Now</a></div>
+            </div>
+            <footer>
+                <span><a href="contact.html" target="_blank" id="linkSty">Contact Us</a></span>
+                <span> © 2020 ROOM SEARCH PVT. LTD</span>
+                <span style="margin-right: 30px;"><a href="https://www.facebook.com" target="_blank"><img
+                            class="socialLogo" src="assests/images/facebook.png" alt="facebooklogo"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img class="socialLogo"
+                            src="assests/images/instagram.png" alt="instagramlogo"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img class="socialLogo"
+                            src="assests/images/twitter.png" alt="twitterlogo"></a>
+                </span>
+
+            </footer>
         </div>
-        <footer>
-            <a href="contact.html">Contact Us</a><br />
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="Facebook"
-                    class="socialLogo"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="Instagram"
-                    class="socialLogo"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="Twitter"
-                    class="socialLogo"></a>
-            <p>© 2020 ROOM SEARCH PVT.LTD.</p>
-        </footer>
-    </div>
 </body>
 
 </html>

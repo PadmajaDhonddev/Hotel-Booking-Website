@@ -5,99 +5,215 @@
     <title>Detail</title>
     <style>
         body {
-                width : 100%;
-                height: 100%;
-                margin : 0px;
-                background-color: #e0e0e0;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            background-color: #e0e0e0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        #full {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .hotelImage {
+            height: 400px;
+            width: 500px;
+            margin: 2% 4% 0% 4%;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .socialLogo {
+            height: 20px;
+            width: 22px;
+            
+        }
+
+        header {
+            background-color: rosybrown;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:10%;
+                display: flex;
+                justify-content: space-between;
+
+
+                }
+
+        
+
+        footer {
+            background-color: rosybrown;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+            height: auto;
+            top: auto;
+            display: flex;
+                left:0;
+                justify-content:space-between;
+                vertical-align: middle;
+                padding:1%;
+        }
+
+        .formStyle {
+            margin-right: 4%;
+            margin-left: 4%;
+            margin-bottom: 1%;
+        }
+
+        #detailStyle {
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-top: 1%;
+            margin-bottom: 2%;
+
+        }
+
+        .login {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #linkSty{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+        }
+        .mainBox {
+                width:100%;
+                margin:0;
+                padding: 2%;
+                height:50%;
+                box-sizing: border-box;
+                display: flex;
             }
-            .hotelImage {
-                height: 500px;
-                width: 500px;
-                margin: 2% 4% 0% 4%;
+            .sideBox1 {
+                width: 60%;
+		 	    height: auto;
+                border: 2px solid black;
+                float:right;
+                display: flex;
+                justify-content: center;
             }
-            .logo {
-                height:60px; 
-                width:60px;
+            .sideBox2 {
+                width: 40%;
+		 	    height: 100%;
+                float:left;
+                overflow: hidden;
+                border: 2px solid black;
             }
-            .socialLogo {
-                height :20px;
-                width : 22px;
+            .labelStyle {
+                margin: 2%;
+                height:max-content;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2%;
             }
-            header {
-                background-color: rosybrown;
-            }
-            footer {
-                background-color: rosybrown;
+            .submitstyle {
+                padding: 1% 2%;
+                margin-left: 45%;
+                margin-top: 2%;
+                margin-bottom: 2%;  
             }
 
-            .formStyle{
-                margin-right: 4%;
-                margin-left: 4%;
-                margin-bottom: 1%;
+            .length {
+                width: 60%;
             }
-            #detailStyle{
-                margin-left: 4%;
-                margin-right: 4%;
-                margin-top: 1%;
-                margin-bottom: 2%;
-
-            }
-
-
-
-        </style>
+    </style>
 </head>
 
 <body>
-    <div>
+    <div id="full">
         <header>
-            <a href="index.html"><img src="assests\images\logo.png" class="logo"  alt="logo" ></a>
-            <a href="login.html" target="_blank">Login</a>
+            <a href="index.html"><img src="assests\images\logo.png" class="logo" alt="logo"></a>
+            <a href="login.html" target="_blank" class="login">Login</a>
         </header>
         <div>
-            <img class="hotelImage" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel"><br/>
-            <form class="formStyle" action="payment.html">
-                <label for="adults">Adults:</label>
-                <input type = "number" id = "adults" name = "number" min = "1" required><br>
+            <div class="mainBox">
+                <div class="sideBox1">
+                    <img class="hotelImage"
+                        src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg">
+                </div>
+                <div class="sideBox2">
+                    <form action="payment.html" class="formStyle">
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br/>
+                        <div class="labelStyle">
+                            <label for="adults">Adults:</label>
+                            <input type="number" id="adults" name="number" min="1" required class="length">
+                        </div><br>
 
-                <label for="date">From Date:</label>
-                <input type="date" id="date" name="fromDate" required><br/>
+                        <div class="labelStyle">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required class="length">
+                        </div><br>
 
-                <label for="date">To Date:</label>
-                <input type="date" id="todate" name="toDate" required><br/>
+                        <div class="labelStyle">
+                            <label for="from">From Date:</label>
+                            <input type="date" id="from" name="from" required class="length">
+                        </div><br>
+                        <div class="labelStyle">
+                            <label for="toDate">To Date:</label>
+                            <input type="date" id="toDate" name="toDate" required class="length">
+                        </div><br>
 
-                <label >Total:</label>
-                <input type="text" id="total" name="price" readonly><br/>
+                        <div class="labelStyle">
+                            <label for="total">Total</label>
+                            <input type="text" id="total" name="total" readonly="readonly" class="length">
+                        </div><br>
 
-                <input type="submit" value="Book Now">
+                        <input type="submit" value="Book Now" class="submitstyle">
 
 
-            </form>
+                    </form>
+                </div>
+            </div>
             <div id="detailStyle">
-            <h2>Radisson Blu Hotel</h2>
-            <p>RATING</p>
-            <p>5 Star</p>
-            <p>AMENITIES</p>
-            <ul>
-                <li>Room service</li>
-                <li>Restaurant</li>
-                <li>Business center</li>
-                <li>Fitness center</li>
-                <li>Pool</li>
-            </ul>
-            <h5>DESCRIPITION</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa beatae doloremque temporibus perspiciatis delectus earum, odit dolorum quaerat deleniti velit ratione laboriosam illum eius ab at aliquam, qui nihil?</p>
+                <h2>Radisson Blu Hotel</h2>
+                <p>RATING</p>
+                <p>5 Star</p>
+                <p>AMENITIES</p>
+                <ul>
+                    <li>Room service</li>
+                    <li>Restaurant</li>
+                    <li>Business center</li>
+                    <li>Fitness center</li>
+                    <li>Pool</li>
+                </ul>
+                <div>
+                    <h5>DESCRIPITION</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa beatae doloremque
+                        temporibus
+                        perspiciatis delectus earum, odit dolorum quaerat deleniti velit ratione laboriosam illum eius
+                        ab at
+                        aliquam, qui nihil?</p>
+                </div>
             </div>
         </div>
         <footer>
-            <a href="contact.html" >Contact Us</a><br/>
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="Facebook" class="socialLogo"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="Instagram" class="socialLogo"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="Twitter" class="socialLogo"></a>
-            <p>© 2020 ROOM SEARCH PVT.LTD.</p>
+            <span><a href="contact.html" target="_blank" id="linkSty">Contact Us</a></span>
+            <span> © 2020 ROOM SEARCH PVT. LTD</span>
+            <span style="margin-right: 30px;"><a href="https://www.facebook.com" target="_blank"><img class="socialLogo"
+                        src="assests/images/facebook.png" alt="facebooklogo"></a>
+                <a href="https://www.instagram.com" target="_blank"><img class="socialLogo"
+                        src="assests/images/instagram.png" alt="instagramlogo"></a>
+                <a href="https://www.twitter.com" target="_blank"><img class="socialLogo"
+                        src="assests/images/twitter.png" alt="twitterlogo"></a>
+            </span>
         </footer>
     </div>
 </body>
